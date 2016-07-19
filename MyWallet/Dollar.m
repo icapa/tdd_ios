@@ -1,19 +1,20 @@
 //
-//  Euro.m
+//  Dollar.m
 //  MyWallet
 //
-//  Created by Iván Cayón Palacio on 18/7/16.
+//  Created by Iván Cayón Palacio on 19/7/16.
 //  Copyright © 2016 KeepCoding. All rights reserved.
 //
 
-#import "Euro.h"
+#import "Dollar.h"
 
-@interface Euro()
+@interface Dollar()
+
 @property (nonatomic) NSInteger amount;
+
 @end
 
-
-@implementation Euro
+@implementation Dollar
 
 -(id) initWithAmount:(NSInteger) amount{
     if (self = [super init]){
@@ -22,8 +23,8 @@
     return self;
 }
 
--(Euro *)times: (NSInteger) multiplier{
-    Euro *newEuro = [[Euro alloc]
+-(Dollar *)times: (NSInteger) multiplier{
+    Dollar *newEuro = [[Dollar alloc]
                      initWithAmount:self.amount * multiplier];
     return newEuro;
 }

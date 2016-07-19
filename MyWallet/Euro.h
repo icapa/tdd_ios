@@ -8,13 +8,15 @@
 
 
 @import Foundation;
+#import "Money.h"
 
-@interface Euro : NSObject
+@interface Euro : Money
 
-@property (readonly) NSInteger amount;
 
--(instancetype) initWithAmount:(NSInteger) amount;
 
--(void)times: (NSInteger) multiplier;
+-(id) initWithAmount:(NSInteger) amount;
+
+-(Euro *)times: (NSInteger) multiplier;
+
 
 @end

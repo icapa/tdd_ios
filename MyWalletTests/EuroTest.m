@@ -25,13 +25,21 @@
     [super tearDown];
 }
 
-- (void) testSimpleMultiplication{
-    Euro *total = [[Euro alloc] initWithAmount: 5];
-    [total times:2];
-    XCTAssertEqual(total.amount,10);
+- (void) testMultiplication{
+    Euro *euro = [[Euro alloc] initWithAmount: 5];
+    Euro *ten = [[Euro alloc]initWithAmount:10];
+    Euro *total = [euro times:2];
     
-    
+    XCTAssertEqualObjects(total, ten, @"€5 *2 should be €10");
 }
 
+-(void) testEquality{
+    Euro *five = [[Euro alloc] initWithAmount:5];
+    Euro *ten = [[Euro alloc] initWithAmount:10];
+    Euro *total = [five times:2];
+    XCTAssertEqualObjects(ten, total,@"Equivalent objects shoud be equal");
+    
+                 
+}
 
 @end

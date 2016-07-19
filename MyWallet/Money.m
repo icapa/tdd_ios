@@ -1,19 +1,20 @@
 //
-//  Euro.m
+//  Money.m
 //  MyWallet
 //
-//  Created by Iván Cayón Palacio on 18/7/16.
+//  Created by Iván Cayón Palacio on 19/7/16.
 //  Copyright © 2016 KeepCoding. All rights reserved.
 //
 
-#import "Euro.h"
+#import "Money.h"
+#import "NSObject+GNUStepAddons.h"
 
-@interface Euro()
+@interface Money()
 @property (nonatomic) NSInteger amount;
 @end
 
 
-@implementation Euro
+@implementation Money
 
 -(id) initWithAmount:(NSInteger) amount{
     if (self = [super init]){
@@ -22,15 +23,18 @@
     return self;
 }
 
--(Euro *)times: (NSInteger) multiplier{
-    Euro *newEuro = [[Euro alloc]
-                     initWithAmount:self.amount * multiplier];
-    return newEuro;
+-(Money *)times: (NSInteger) multiplier{
+    // no se debería llamar, sino que deberia de usar
+    // el de la sub clase
+    return [self subclassResponsabillity:_cmd];
+    
 }
 
+/*
 #pragma mark - Overwritten
 -(BOOL)isEqual:(id)object{
     return [self amount] == [object amount];
 }
+*/
 
 @end

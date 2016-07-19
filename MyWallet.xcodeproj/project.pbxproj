@@ -13,9 +13,18 @@
 		CF049C931D3D6BD9009716F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF049C911D3D6BD9009716F1 /* Main.storyboard */; };
 		CF049C951D3D6BD9009716F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF049C941D3D6BD9009716F1 /* Assets.xcassets */; };
 		CF049C981D3D6BD9009716F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF049C961D3D6BD9009716F1 /* LaunchScreen.storyboard */; };
-		CF049CAE1D3D6BD9009716F1 /* MyWalletUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF049CAD1D3D6BD9009716F1 /* MyWalletUITests.m */; };
 		CF049CBC1D3D6D13009716F1 /* EuroTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF049CBB1D3D6D13009716F1 /* EuroTest.m */; };
 		CF049CBF1D3D6DE2009716F1 /* Euro.m in Sources */ = {isa = PBXBuildFile; fileRef = CF049CBE1D3D6DE2009716F1 /* Euro.m */; };
+		CF2FEE511D3ECB9A00EBD139 /* Euro.m in Sources */ = {isa = PBXBuildFile; fileRef = CF049CBE1D3D6DE2009716F1 /* Euro.m */; };
+		CF2FEE521D3ED22300EBD139 /* MyWalletUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF049CAD1D3D6BD9009716F1 /* MyWalletUITests.m */; };
+		CF2FEE541D3ED4D800EBD139 /* DollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE531D3ED4D800EBD139 /* DollarTest.m */; };
+		CF2FEE571D3ED5CB00EBD139 /* Dollar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE561D3ED5CB00EBD139 /* Dollar.m */; };
+		CF2FEE581D3ED5CB00EBD139 /* Dollar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE561D3ED5CB00EBD139 /* Dollar.m */; };
+		CF2FEE5B1D3ED8CD00EBD139 /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE5A1D3ED8CD00EBD139 /* Money.m */; };
+		CF2FEE5C1D3ED8CD00EBD139 /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE5A1D3ED8CD00EBD139 /* Money.m */; };
+		CF2FEE601D3EDB6600EBD139 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE5F1D3EDB6600EBD139 /* NSObject+GNUStepAddons.m */; };
+		CF2FEE611D3EDB6600EBD139 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE5F1D3EDB6600EBD139 /* NSObject+GNUStepAddons.m */; };
+		CF2FEE661D3EDEFB00EBD139 /* MoneyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE651D3EDEFB00EBD139 /* MoneyTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,14 @@
 		CF049CBB1D3D6D13009716F1 /* EuroTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EuroTest.m; sourceTree = "<group>"; };
 		CF049CBD1D3D6DE2009716F1 /* Euro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Euro.h; sourceTree = "<group>"; };
 		CF049CBE1D3D6DE2009716F1 /* Euro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Euro.m; sourceTree = "<group>"; };
+		CF2FEE531D3ED4D800EBD139 /* DollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarTest.m; sourceTree = "<group>"; };
+		CF2FEE551D3ED5CB00EBD139 /* Dollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dollar.h; sourceTree = "<group>"; };
+		CF2FEE561D3ED5CB00EBD139 /* Dollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dollar.m; sourceTree = "<group>"; };
+		CF2FEE591D3ED8CD00EBD139 /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
+		CF2FEE5A1D3ED8CD00EBD139 /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
+		CF2FEE5E1D3EDB6600EBD139 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
+		CF2FEE5F1D3EDB6600EBD139 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
+		CF2FEE651D3EDEFB00EBD139 /* MoneyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +121,8 @@
 		CF049C871D3D6BD9009716F1 /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				CF2FEE5D1D3EDABD00EBD139 /* Categories */,
+				CF2FEE501D3ECA8800EBD139 /* Models */,
 				CF049C8B1D3D6BD9009716F1 /* AppDelegate.h */,
 				CF049C8C1D3D6BD9009716F1 /* AppDelegate.m */,
 				CF049C8E1D3D6BD9009716F1 /* ViewController.h */,
@@ -113,8 +132,6 @@
 				CF049C961D3D6BD9009716F1 /* LaunchScreen.storyboard */,
 				CF049C991D3D6BD9009716F1 /* Info.plist */,
 				CF049C881D3D6BD9009716F1 /* Supporting Files */,
-				CF049CBD1D3D6DE2009716F1 /* Euro.h */,
-				CF049CBE1D3D6DE2009716F1 /* Euro.m */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -130,8 +147,8 @@
 		CF049CA11D3D6BD9009716F1 /* MyWalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				CF2FEE4F1D3EC9A700EBD139 /* Models */,
 				CF049CA41D3D6BD9009716F1 /* Info.plist */,
-				CF049CBB1D3D6D13009716F1 /* EuroTest.m */,
 			);
 			path = MyWalletTests;
 			sourceTree = "<group>";
@@ -143,6 +160,38 @@
 				CF049CAF1D3D6BD9009716F1 /* Info.plist */,
 			);
 			path = MyWalletUITests;
+			sourceTree = "<group>";
+		};
+		CF2FEE4F1D3EC9A700EBD139 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF049CBB1D3D6D13009716F1 /* EuroTest.m */,
+				CF2FEE531D3ED4D800EBD139 /* DollarTest.m */,
+				CF2FEE651D3EDEFB00EBD139 /* MoneyTest.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CF2FEE501D3ECA8800EBD139 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF049CBD1D3D6DE2009716F1 /* Euro.h */,
+				CF049CBE1D3D6DE2009716F1 /* Euro.m */,
+				CF2FEE551D3ED5CB00EBD139 /* Dollar.h */,
+				CF2FEE561D3ED5CB00EBD139 /* Dollar.m */,
+				CF2FEE591D3ED8CD00EBD139 /* Money.h */,
+				CF2FEE5A1D3ED8CD00EBD139 /* Money.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CF2FEE5D1D3EDABD00EBD139 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CF2FEE5E1D3EDB6600EBD139 /* NSObject+GNUStepAddons.h */,
+				CF2FEE5F1D3EDB6600EBD139 /* NSObject+GNUStepAddons.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +268,6 @@
 					};
 					CF049CA81D3D6BD9009716F1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = CF049C841D3D6BD9009716F1;
 					};
 				};
 			};
@@ -275,6 +323,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2FEE5B1D3ED8CD00EBD139 /* Money.m in Sources */,
+				CF2FEE571D3ED5CB00EBD139 /* Dollar.m in Sources */,
+				CF2FEE601D3EDB6600EBD139 /* NSObject+GNUStepAddons.m in Sources */,
 				CF049CBF1D3D6DE2009716F1 /* Euro.m in Sources */,
 				CF049C901D3D6BD9009716F1 /* ViewController.m in Sources */,
 				CF049C8D1D3D6BD9009716F1 /* AppDelegate.m in Sources */,
@@ -286,6 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2FEE661D3EDEFB00EBD139 /* MoneyTest.m in Sources */,
+				CF2FEE541D3ED4D800EBD139 /* DollarTest.m in Sources */,
+				CF2FEE581D3ED5CB00EBD139 /* Dollar.m in Sources */,
+				CF2FEE5C1D3ED8CD00EBD139 /* Money.m in Sources */,
+				CF2FEE611D3EDB6600EBD139 /* NSObject+GNUStepAddons.m in Sources */,
+				CF2FEE511D3ECB9A00EBD139 /* Euro.m in Sources */,
 				CF049CBC1D3D6D13009716F1 /* EuroTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF049CAE1D3D6BD9009716F1 /* MyWalletUITests.m in Sources */,
+				CF2FEE521D3ED22300EBD139 /* MyWalletUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +527,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = icapa.MyWalletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = MyWallet;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -481,7 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = icapa.MyWalletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = MyWallet;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -504,6 +561,7 @@
 				CF049CB41D3D6BD9009716F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF049CB51D3D6BD9009716F1 /* Build configuration list for PBXNativeTarget "MyWalletTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +570,7 @@
 				CF049CB71D3D6BD9009716F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF049CB81D3D6BD9009716F1 /* Build configuration list for PBXNativeTarget "MyWalletUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +579,7 @@
 				CF049CBA1D3D6BD9009716F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
