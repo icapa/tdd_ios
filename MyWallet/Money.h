@@ -10,9 +10,18 @@
 
 @interface Money : NSObject
 
--(id) initWithAmount:(NSInteger) amount;
+@property (nonatomic, readonly) NSString *currency;
 
--(Money *)times: (NSInteger) multiplier;
+
++(id) euroWithAmount: (NSInteger) amount;
++(id) dollarWithAmount: (NSInteger) amount;
+
+-(id) initWithAmount:(NSInteger) amount
+            currency:(NSString *) currency;
+
+-(id)times: (NSInteger) multiplier;
+
+-(Money *) plus: (Money *) other;
 
 
 @end

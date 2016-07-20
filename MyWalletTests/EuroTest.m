@@ -7,7 +7,8 @@
 //
 @import XCTest;
 
-#import "Euro.h"
+
+#import "Money.h"
 
 @interface EuroTest : XCTestCase
 
@@ -26,20 +27,37 @@
 }
 
 - (void) testMultiplication{
-    Euro *euro = [[Euro alloc] initWithAmount: 5];
-    Euro *ten = [[Euro alloc]initWithAmount:10];
+    Euro *euro = [Money euroWithAmount: 5];
+    Euro *ten = [Money euroWithAmount:10];
     Euro *total = [euro times:2];
     
     XCTAssertEqualObjects(total, ten, @"€5 *2 should be €10");
 }
 
 -(void) testEquality{
-    Euro *five = [[Euro alloc] initWithAmount:5];
-    Euro *ten = [[Euro alloc] initWithAmount:10];
+    Euro *five = [Money  euroWithAmount:5];
+    Euro *ten = [Money  euroWithAmount:10];
     Euro *total = [five times:2];
     XCTAssertEqualObjects(ten, total,@"Equivalent objects shoud be equal");
     
                  
+}
+
+-(void) testHash{
+    Euro *a = [Money  euroWithAmount:2];
+    Euro *b = [Money  euroWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash], @"Equal objects must have the same hash");
+}
+
+-(void) testAmountStorage{
+    Euro *euro = [Money  euroWithAmount:2];
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    XCTAssertEqual(2,[[euro performSelector:@selector(amount)]integerValue],@"The values retreived should be the same as stored");
+#pragma clang diagnostic pop
+    
 }
 
 @end

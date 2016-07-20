@@ -14,9 +14,8 @@
 
 
 
--(id) initWithAmount:(NSInteger) amount;
 
--(Euro *)times: (NSInteger) multiplier;
+
 
 
 @end

@@ -8,29 +8,16 @@
 
 #import "Euro.h"
 
-@interface Euro()
-@property (nonatomic) NSInteger amount;
-@end
-
+#import "money-Private.h"
 
 @implementation Euro
 
--(id) initWithAmount:(NSInteger) amount{
-    if (self = [super init]){
-        _amount = amount;
-    }
-    return self;
-}
 
--(Euro *)times: (NSInteger) multiplier{
-    Euro *newEuro = [[Euro alloc]
-                     initWithAmount:self.amount * multiplier];
-    return newEuro;
-}
+
 
 #pragma mark - Overwritten
--(BOOL)isEqual:(id)object{
-    return [self amount] == [object amount];
-}
+
+
+
 
 @end
