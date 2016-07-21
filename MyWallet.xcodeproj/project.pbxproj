@@ -12,6 +12,12 @@
 		CF049C931D3D6BD9009716F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF049C911D3D6BD9009716F1 /* Main.storyboard */; };
 		CF049C951D3D6BD9009716F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF049C941D3D6BD9009716F1 /* Assets.xcassets */; };
 		CF049C981D3D6BD9009716F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF049C961D3D6BD9009716F1 /* LaunchScreen.storyboard */; };
+		CF0ADA521D4155630021B96D /* BrokerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0ADA511D4155630021B96D /* BrokerTest.m */; };
+		CF0ADA551D41566E0021B96D /* Broker.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0ADA541D41566E0021B96D /* Broker.m */; };
+		CF0ADA561D41566E0021B96D /* Broker.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0ADA541D41566E0021B96D /* Broker.m */; };
+		CF0ADA581D416E750021B96D /* WalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0ADA571D416E750021B96D /* WalletTests.m */; };
+		CF0ADA5B1D4170400021B96D /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0ADA5A1D4170400021B96D /* Wallet.m */; };
+		CF0ADA5C1D4170400021B96D /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0ADA5A1D4170400021B96D /* Wallet.m */; };
 		CF2FEE521D3ED22300EBD139 /* MyWalletUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF049CAD1D3D6BD9009716F1 /* MyWalletUITests.m */; };
 		CF2FEE5B1D3ED8CD00EBD139 /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE5A1D3ED8CD00EBD139 /* Money.m */; };
 		CF2FEE5C1D3ED8CD00EBD139 /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE5A1D3ED8CD00EBD139 /* Money.m */; };
@@ -51,6 +57,12 @@
 		CF049CA91D3D6BD9009716F1 /* MyWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF049CAD1D3D6BD9009716F1 /* MyWalletUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWalletUITests.m; sourceTree = "<group>"; };
 		CF049CAF1D3D6BD9009716F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0ADA511D4155630021B96D /* BrokerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrokerTest.m; sourceTree = "<group>"; };
+		CF0ADA531D41566E0021B96D /* Broker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broker.h; sourceTree = "<group>"; };
+		CF0ADA541D41566E0021B96D /* Broker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Broker.m; sourceTree = "<group>"; };
+		CF0ADA571D416E750021B96D /* WalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletTests.m; sourceTree = "<group>"; };
+		CF0ADA591D4170400021B96D /* Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wallet.h; sourceTree = "<group>"; };
+		CF0ADA5A1D4170400021B96D /* Wallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wallet.m; sourceTree = "<group>"; };
 		CF2FEE591D3ED8CD00EBD139 /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
 		CF2FEE5A1D3ED8CD00EBD139 /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
 		CF2FEE5E1D3EDB6600EBD139 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
@@ -149,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				CF2FEE651D3EDEFB00EBD139 /* MoneyTest.m */,
+				CF0ADA511D4155630021B96D /* BrokerTest.m */,
+				CF0ADA571D416E750021B96D /* WalletTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -158,6 +172,10 @@
 			children = (
 				CF2FEE591D3ED8CD00EBD139 /* Money.h */,
 				CF2FEE5A1D3ED8CD00EBD139 /* Money.m */,
+				CF0ADA531D41566E0021B96D /* Broker.h */,
+				CF0ADA541D41566E0021B96D /* Broker.m */,
+				CF0ADA591D4170400021B96D /* Wallet.h */,
+				CF0ADA5A1D4170400021B96D /* Wallet.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -302,8 +320,10 @@
 			files = (
 				CF2FEE5B1D3ED8CD00EBD139 /* Money.m in Sources */,
 				CF2FEE601D3EDB6600EBD139 /* NSObject+GNUStepAddons.m in Sources */,
+				CF0ADA5B1D4170400021B96D /* Wallet.m in Sources */,
 				CF049C8D1D3D6BD9009716F1 /* AppDelegate.m in Sources */,
 				CF049C8A1D3D6BD9009716F1 /* main.m in Sources */,
+				CF0ADA551D41566E0021B96D /* Broker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,9 +331,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF0ADA521D4155630021B96D /* BrokerTest.m in Sources */,
 				CF2FEE661D3EDEFB00EBD139 /* MoneyTest.m in Sources */,
+				CF0ADA5C1D4170400021B96D /* Wallet.m in Sources */,
+				CF0ADA581D416E750021B96D /* WalletTests.m in Sources */,
 				CF2FEE5C1D3ED8CD00EBD139 /* Money.m in Sources */,
 				CF2FEE611D3EDB6600EBD139 /* NSObject+GNUStepAddons.m in Sources */,
+				CF0ADA561D41566E0021B96D /* Broker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
