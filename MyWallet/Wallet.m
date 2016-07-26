@@ -11,6 +11,7 @@
 
 
 @interface Wallet()
+
 @property (nonatomic,strong) NSMutableArray *moneys;
 @end
 

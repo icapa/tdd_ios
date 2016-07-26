@@ -36,7 +36,10 @@
     self.wallet = [[Wallet alloc] initWithAmount:1 currency:@"USD"];
     [self.wallet plus: [Money euroWithAmount:1]];
     
-    self.walletVC = [[WalletTableViewController alloc] initWithModel:self.wallet];
+    self.walletVC = [[WalletTableViewController alloc]
+                     initWithModel:self.wallet
+                     broker:nil];
+    
     
     
 }

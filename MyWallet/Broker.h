@@ -11,6 +11,7 @@
 
 @interface Broker : NSObject
 
+@property (nonatomic,readonly) NSMutableSet *currencies;
 @property (nonatomic,strong) NSMutableDictionary *rates;
 
 
@@ -22,6 +23,8 @@
 -(NSString *)keyForCurrency:(NSString * )fromCurrency toCurrency:(NSString *) toCurrency;
 
 -(void) parseJSONRates:(NSData *) json;
+
+-(NSInteger) currenciesCount;
 
 
 @end

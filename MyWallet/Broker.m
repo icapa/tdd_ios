@@ -10,7 +10,7 @@
 #import "Money.h"
 
 @interface Broker()
-
+@property (nonatomic,strong) NSMutableSet *currencies;
 @end
 
 @implementation Broker
@@ -18,6 +18,7 @@
 -(id) init{
     if (self = [super init]){
         _rates = [@{}mutableCopy];
+        _currencies = [[NSMutableSet alloc] init];
     }
     return self;
 }
@@ -41,6 +42,13 @@
     [self.rates setObject:invRate
                    forKey:[self keyForCurrency:toCurrency toCurrency:fromCurrency]];
     
+    // Meto en el Set cada vez que hay uno nuevo
+    [self.currencies addObject:fromCurrency];
+    [self.currencies addObject:toCurrency];
+}
+
+-(NSInteger) currenciesCount{
+    return self.currencies.count;
 }
 
 

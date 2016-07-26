@@ -8,15 +8,18 @@
 
 #import "WalletTableViewController.h"
 #import "Wallet.h"
+#import "Broker.h"
 @interface WalletTableViewController ()
 @property (nonatomic,strong) Wallet *model;
+@property (nonatomic,strong) Broker *broker;
 @end
 
 @implementation WalletTableViewController
 
--(id) initWithModel:(Wallet *)model{
+-(id) initWithModel:(Wallet *)model broker:(Broker *)broker{
     if (self = [super initWithStyle:UITableViewStylePlain]){
         _model = model;
+        _broker = broker;
     }
     return self;
 }
@@ -41,12 +44,21 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    // Numero de conversiones  * 2, más otro
+    return [self.broker currenciesCount] + 1;
+
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return [self.model count] +1;
+    // Si es la ultima section, siempre es 1
+    if (section == [self.broker currenciesCount]){
+        return 1;
+    }else{
+        // Se devuelve el numero
+        return [self moneyCountForCurrency:section]+1;
+    }
+    
 }
 
 /*
@@ -102,5 +114,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Utils
+-(NSInteger) moneyCountForCurrency: (NSInteger)section{
+    NSInteger count=0;
+    NSArray *array = [self.broker.currencies allObjects];
+    for (Money *each in self.model.moneys){
+        
+        if ([each.currency isEqualToString: array[section] ]){
+            count = count + 1;
+        }
+    }
+    return count;
+}
 
 @end
