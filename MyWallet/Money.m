@@ -9,8 +9,7 @@
 #import "Money.h"
 #import "NSObject+GNUStepAddons.h"
 
-#import "Euro.h"
-#import "Dollar.h"
+#import "Broker.h"
 
 @interface Money()
 @property (nonatomic,strong) NSNumber *amount;
@@ -53,6 +52,32 @@
     return total;
 }
 
+-(id<Money>) reduceToCurrency:(NSString *) currency withBroker:(Broker *) broker{
+    Money *result;
+    // Comprobamos que divisa de origen y destino son las mismas
+    double rate = [[broker.rates
+                    objectForKey:[broker keyForCurrency:self.currency
+                                           toCurrency:currency]] doubleValue];
+    
+    if ([self.currency isEqualToString:currency]){
+        result = self;
+    }
+    else if(rate == 0){
+        // No hay tasa de conversión, excepción
+        [NSException raise:@"NoConversionRateException"
+                    format:@"Must have a conversion from %@ to %@",self.currency,currency];
+    }
+    else{
+        
+        double newAmount = [self.amount doubleValue] * rate;
+        
+        result = [[Money alloc] initWithAmount:newAmount
+                                      currency:currency];
+        
+    }
+    return result;
+
+}
 
 
 #pragma mark - Overwritten

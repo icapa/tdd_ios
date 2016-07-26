@@ -24,6 +24,16 @@
 		CF2FEE601D3EDB6600EBD139 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE5F1D3EDB6600EBD139 /* NSObject+GNUStepAddons.m */; };
 		CF2FEE611D3EDB6600EBD139 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE5F1D3EDB6600EBD139 /* NSObject+GNUStepAddons.m */; };
 		CF2FEE661D3EDEFB00EBD139 /* MoneyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FEE651D3EDEFB00EBD139 /* MoneyTest.m */; };
+		CF33A3681D4676EB0051C581 /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A3661D4676EB0051C581 /* SimpleViewController.m */; };
+		CF33A3691D4676EB0051C581 /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A3661D4676EB0051C581 /* SimpleViewController.m */; };
+		CF33A36A1D4676EB0051C581 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF33A3671D4676EB0051C581 /* SimpleViewController.xib */; };
+		CF33A36B1D4676EB0051C581 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF33A3671D4676EB0051C581 /* SimpleViewController.xib */; };
+		CF33A36E1D4677280051C581 /* ControllersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A36D1D4677280051C581 /* ControllersTests.m */; };
+		CF33A3711D4695A20051C581 /* WalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A3701D4695A20051C581 /* WalletTableViewController.m */; };
+		CF33A3721D4695A20051C581 /* WalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A3701D4695A20051C581 /* WalletTableViewController.m */; };
+		CF33A3751D469EA10051C581 /* NSNotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A3741D469EA10051C581 /* NSNotificationCenterTests.m */; };
+		CF33A3781D46A1E10051C581 /* NSFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A3771D46A1E10051C581 /* NSFakeNotificationCenter.m */; };
+		CF33A3791D46A1E10051C581 /* NSFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A3771D46A1E10051C581 /* NSFakeNotificationCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +78,15 @@
 		CF2FEE5E1D3EDB6600EBD139 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		CF2FEE5F1D3EDB6600EBD139 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		CF2FEE651D3EDEFB00EBD139 /* MoneyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTest.m; sourceTree = "<group>"; };
+		CF33A3651D4676EB0051C581 /* SimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
+		CF33A3661D4676EB0051C581 /* SimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
+		CF33A3671D4676EB0051C581 /* SimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
+		CF33A36D1D4677280051C581 /* ControllersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllersTests.m; sourceTree = "<group>"; };
+		CF33A36F1D4695A20051C581 /* WalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletTableViewController.h; sourceTree = "<group>"; };
+		CF33A3701D4695A20051C581 /* WalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletTableViewController.m; sourceTree = "<group>"; };
+		CF33A3741D469EA10051C581 /* NSNotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNotificationCenterTests.m; sourceTree = "<group>"; };
+		CF33A3761D46A1E10051C581 /* NSFakeNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFakeNotificationCenter.h; sourceTree = "<group>"; };
+		CF33A3771D46A1E10051C581 /* NSFakeNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFakeNotificationCenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +137,7 @@
 		CF049C871D3D6BD9009716F1 /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				CF33A3641D4676950051C581 /* Controllers */,
 				CF2FEE5D1D3EDABD00EBD139 /* Categories */,
 				CF2FEE501D3ECA8800EBD139 /* Models */,
 				CF049C8B1D3D6BD9009716F1 /* AppDelegate.h */,
@@ -142,6 +162,8 @@
 		CF049CA11D3D6BD9009716F1 /* MyWalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				CF33A3731D469E710051C581 /* Singletons */,
+				CF33A36C1D4676FE0051C581 /* Controllers */,
 				CF2FEE4F1D3EC9A700EBD139 /* Models */,
 				CF049CA41D3D6BD9009716F1 /* Info.plist */,
 			);
@@ -187,6 +209,36 @@
 				CF2FEE5F1D3EDB6600EBD139 /* NSObject+GNUStepAddons.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		CF33A3641D4676950051C581 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF33A3651D4676EB0051C581 /* SimpleViewController.h */,
+				CF33A3661D4676EB0051C581 /* SimpleViewController.m */,
+				CF33A3671D4676EB0051C581 /* SimpleViewController.xib */,
+				CF33A36F1D4695A20051C581 /* WalletTableViewController.h */,
+				CF33A3701D4695A20051C581 /* WalletTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CF33A36C1D4676FE0051C581 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF33A36D1D4677280051C581 /* ControllersTests.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CF33A3731D469E710051C581 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				CF33A3741D469EA10051C581 /* NSNotificationCenterTests.m */,
+				CF33A3761D46A1E10051C581 /* NSFakeNotificationCenter.h */,
+				CF33A3771D46A1E10051C581 /* NSFakeNotificationCenter.m */,
+			);
+			name = Singletons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +345,7 @@
 			files = (
 				CF049C981D3D6BD9009716F1 /* LaunchScreen.storyboard in Resources */,
 				CF049C951D3D6BD9009716F1 /* Assets.xcassets in Resources */,
+				CF33A36A1D4676EB0051C581 /* SimpleViewController.xib in Resources */,
 				CF049C931D3D6BD9009716F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF33A36B1D4676EB0051C581 /* SimpleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,11 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF33A3781D46A1E10051C581 /* NSFakeNotificationCenter.m in Sources */,
 				CF2FEE5B1D3ED8CD00EBD139 /* Money.m in Sources */,
 				CF2FEE601D3EDB6600EBD139 /* NSObject+GNUStepAddons.m in Sources */,
 				CF0ADA5B1D4170400021B96D /* Wallet.m in Sources */,
 				CF049C8D1D3D6BD9009716F1 /* AppDelegate.m in Sources */,
+				CF33A3681D4676EB0051C581 /* SimpleViewController.m in Sources */,
 				CF049C8A1D3D6BD9009716F1 /* main.m in Sources */,
+				CF33A3711D4695A20051C581 /* WalletTableViewController.m in Sources */,
 				CF0ADA551D41566E0021B96D /* Broker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,10 +390,15 @@
 			files = (
 				CF0ADA521D4155630021B96D /* BrokerTest.m in Sources */,
 				CF2FEE661D3EDEFB00EBD139 /* MoneyTest.m in Sources */,
+				CF33A3691D4676EB0051C581 /* SimpleViewController.m in Sources */,
+				CF33A36E1D4677280051C581 /* ControllersTests.m in Sources */,
 				CF0ADA5C1D4170400021B96D /* Wallet.m in Sources */,
 				CF0ADA581D416E750021B96D /* WalletTests.m in Sources */,
 				CF2FEE5C1D3ED8CD00EBD139 /* Money.m in Sources */,
+				CF33A3751D469EA10051C581 /* NSNotificationCenterTests.m in Sources */,
 				CF2FEE611D3EDB6600EBD139 /* NSObject+GNUStepAddons.m in Sources */,
+				CF33A3791D46A1E10051C581 /* NSFakeNotificationCenter.m in Sources */,
+				CF33A3721D4695A20051C581 /* WalletTableViewController.m in Sources */,
 				CF0ADA561D41566E0021B96D /* Broker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
