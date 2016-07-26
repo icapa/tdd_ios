@@ -34,6 +34,7 @@
 		CF33A3751D469EA10051C581 /* NSNotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A3741D469EA10051C581 /* NSNotificationCenterTests.m */; };
 		CF33A3781D46A1E10051C581 /* NSFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A3771D46A1E10051C581 /* NSFakeNotificationCenter.m */; };
 		CF33A3791D46A1E10051C581 /* NSFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33A3771D46A1E10051C581 /* NSFakeNotificationCenter.m */; };
+		CFE085F21D47DD2800DB5951 /* NetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE085F11D47DD2800DB5951 /* NetworkTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		CF33A3741D469EA10051C581 /* NSNotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNotificationCenterTests.m; sourceTree = "<group>"; };
 		CF33A3761D46A1E10051C581 /* NSFakeNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFakeNotificationCenter.h; sourceTree = "<group>"; };
 		CF33A3771D46A1E10051C581 /* NSFakeNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFakeNotificationCenter.m; sourceTree = "<group>"; };
+		CFE085F11D47DD2800DB5951 /* NetworkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		CF049CA11D3D6BD9009716F1 /* MyWalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				CFE085F31D47DD3100DB5951 /* Network */,
 				CF33A3731D469E710051C581 /* Singletons */,
 				CF33A36C1D4676FE0051C581 /* Controllers */,
 				CF2FEE4F1D3EC9A700EBD139 /* Models */,
@@ -239,6 +242,14 @@
 				CF33A3771D46A1E10051C581 /* NSFakeNotificationCenter.m */,
 			);
 			name = Singletons;
+			sourceTree = "<group>";
+		};
+		CFE085F31D47DD3100DB5951 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CFE085F11D47DD2800DB5951 /* NetworkTests.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +411,7 @@
 				CF33A3791D46A1E10051C581 /* NSFakeNotificationCenter.m in Sources */,
 				CF33A3721D4695A20051C581 /* WalletTableViewController.m in Sources */,
 				CF0ADA561D41566E0021B96D /* Broker.m in Sources */,
+				CFE085F21D47DD2800DB5951 /* NetworkTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
