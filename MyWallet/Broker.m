@@ -32,12 +32,12 @@
     
 }
 
--(void) addRate: (NSInteger) rate fromCurrency:(NSString *)fromCurrency
+-(void) addRate: (NSNumber *) rate fromCurrency:(NSString *)fromCurrency
      toCurrency:(NSString *)toCurrency{
-    [self.rates setObject:@(rate)
+    [self.rates setObject:rate
                    forKey:[self keyForCurrency:fromCurrency toCurrency:toCurrency]];
     
-    NSNumber *invRate= @(1.0/rate);
+    NSNumber *invRate= @(1.0/[rate doubleValue]);
     
     [self.rates setObject:invRate
                    forKey:[self keyForCurrency:toCurrency toCurrency:fromCurrency]];

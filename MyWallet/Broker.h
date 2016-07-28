@@ -17,7 +17,7 @@
 
 -(Money *) reduce:(id<Money>) money toCurrency:(NSString *)currency;
 
--(void) addRate: (NSInteger) rate fromCurrency:(NSString *)fromCurrency
+-(void) addRate: (NSNumber *) rate fromCurrency:(NSString *)fromCurrency
      toCurrency:(NSString *)toCurrency;
 
 -(NSString *)keyForCurrency:(NSString * )fromCurrency toCurrency:(NSString *) toCurrency;

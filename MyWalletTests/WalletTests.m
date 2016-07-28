@@ -31,7 +31,7 @@
 
 -(void) testAdditionWithReduction{
     Broker *broker = [Broker new];
-    [broker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
+    [broker addRate:[NSNumber numberWithDouble:2] fromCurrency:@"EUR" toCurrency:@"USD"];
     
     Wallet *wallet = [[Wallet alloc] initWithAmount:[NSNumber numberWithDouble:40] currency:@"EUR"];
     [wallet plus: [Money dollarWithAmount:[NSNumber numberWithDouble:20]]];

@@ -24,7 +24,10 @@
     return self;
 }
 
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -61,72 +64,32 @@
     
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     if (section < [self.broker.currencies count])
     {
         NSArray *array = [self.broker.currencies allObjects];
-        NSString *aux;
-
-        aux = [NSString stringWithFormat:@"%@",array[section]];
+        NSString *aux=nil;
+        NSNumber *rate=nil;
+        
+        NSString *key = [NSString stringWithFormat:@"%@-%@",
+                         array[section],@"EUR"];
+        
+        if ([array[section] isEqualToString:@"EUR"]){
+            rate = [NSNumber numberWithDouble:1.0];
+            aux = [NSString stringWithFormat:@"%@",array[section]];
+        }
+        else{
+            rate = [self.broker.rates objectForKey:key];
+            aux = [NSString stringWithFormat:@"%@ - (1 %@ = %0.2f %@)",
+                   array[section],
+                   array[section],[rate doubleValue], @"EUR"];
+        }
         return aux;
     }
     else{
         // Si es el total
-        return @"Wallet €";
+        return @"Total €";
     }
         
 }

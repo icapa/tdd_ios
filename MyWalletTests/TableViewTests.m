@@ -31,7 +31,7 @@
     
     // Creo el broker
     self.broker = [Broker new];
-    [self.broker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
+    [self.broker addRate:[NSNumber numberWithDouble:2] fromCurrency:@"EUR" toCurrency:@"USD"];
                    
     
     // Creo la tabla que quiero probar
@@ -103,8 +103,8 @@
     NSString *dollar=[self.tableVC tableView:self.tableVC.tableView titleForHeaderInSection:1];
     NSString *total=[self.tableVC tableView:self.tableVC.tableView titleForHeaderInSection:2];
     XCTAssertEqualObjects(eur, @"EUR",@"Index 0 should be EUR");
-    XCTAssertEqualObjects(dollar,@"USD", @"Index 1 should be USD");
-    XCTAssertEqualObjects(total,@"Wallet €", @"Index 2 should return nil");
+    XCTAssertEqualObjects(dollar,@"USD - (1 USD = 0.50 EUR)", @"Index 1 should be USD conversion");
+    XCTAssertEqualObjects(total,@"Total €", @"Index 2 should return nil");
 
 }
 

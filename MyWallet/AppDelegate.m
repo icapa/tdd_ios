@@ -27,14 +27,25 @@
     WalletTableViewController *tableVC=nil;
     
     // Creo un wallet con dos divisas distintas
-    wallet = [[Wallet alloc]initWithAmount:[NSNumber numberWithDouble:1] currency:@"EUR"];
-    [wallet plus:[Money euroWithAmount:[NSNumber numberWithDouble:2]]];
+    //Euros
+    wallet = [[Wallet alloc]initWithAmount:[NSNumber numberWithDouble:10] currency:@"EUR"];
+    [wallet plus:[Money euroWithAmount:[NSNumber numberWithDouble:10]]];
     
-    [wallet plus:[Money dollarWithAmount:[NSNumber numberWithDouble:1]]];
+    // Dollar
+    [wallet plus:[Money dollarWithAmount:[NSNumber numberWithDouble:20]]];
+    [wallet plus:[Money dollarWithAmount:[NSNumber numberWithDouble:20]]];
+    
+    
+    
+    // Libras
+    [wallet plus:[[Money alloc]initWithAmount:[NSNumber numberWithDouble:40] currency:@"GBP"]];
+    [wallet plus:[[Money alloc]initWithAmount:[NSNumber numberWithDouble:40] currency:@"GBP"]];
+    
     
     // Creo el broker
     broker = [Broker new];
-    [broker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
+    [broker addRate:[NSNumber numberWithDouble:2] fromCurrency:@"EUR" toCurrency:@"USD"];
+    [broker addRate:[NSNumber numberWithDouble:4] fromCurrency:@"EUR" toCurrency:@"GBP"];
     
     
     // Creo la tabla que quiero probar
@@ -44,7 +55,11 @@
     
 
     
-    self.window.rootViewController = tableVC;
+    UINavigationController *nav = [[UINavigationController alloc]
+                                   initWithRootViewController:tableVC];
+    
+    //self.window.rootViewController = tableVC;
+    self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     
     [self.window makeKeyAndVisible];
