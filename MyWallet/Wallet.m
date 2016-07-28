@@ -13,6 +13,7 @@
 @interface Wallet()
 
 @property (nonatomic,strong) NSMutableArray *moneys;
+
 @end
 
 
@@ -22,7 +23,7 @@
     return self.moneys.count;
 }
 
--(id) initWithAmount:(NSInteger)amount currency:(NSString *)currency{
+-(id) initWithAmount:(NSNumber *)amount currency:(NSString *)currency{
     if (self = [super init]){
         Money *money =[[Money alloc] initWithAmount:amount currency:currency];
         _moneys = [NSMutableArray array];
@@ -63,6 +64,52 @@
     }
     return result;
 }
+
+-(Money *) moneyFor:(NSString *)currency atIndex: (NSInteger) index{
+    NSMutableArray *array = [NSMutableArray array];
+    Money *total = [[Money alloc] initWithAmount:0 currency:currency];
+    for (Money *each in self.moneys){
+        if ([each.currency isEqualToString:currency]){
+            [array addObject:each];
+            total = [total plus:each];
+        }
+    }
+    if (array.count == 0 || index>array.count){
+        return nil;
+    }
+    else if (index==array.count){
+        // Se devuelve la suma, tengo el array lo puedo sumar
+        return total;
+    }
+    else{
+        return array[index];
+    }
+}
+
+-(Money *) totalMoneyWithBroker:(Broker *)broker{
+    // El total es en la divisa de refencia que son €
+    Money *total = [Money euroWithAmount:0];
+    for (Money *each in self.moneys){
+        total =[total plus:[each reduceToCurrency:@"EUR" withBroker:broker]];
+    }
+    return total;
+}
+
+
+-(NSString *) currencyAtIndex:(NSInteger) index{
+    if (index<self.moneys.count){
+        Money *m = self.moneys[index];
+        return m.currency;
+    }
+    return nil;
+}
+    
+
+
+
+
+
+
 
 #pragma mark - Notificactions
 -(void) subscribeToMemoryWarning:(NSNotificationCenter * )nc{

@@ -15,4 +15,9 @@
 
 -(void) subscribeToMemoryWarning:(NSNotificationCenter * )nc;
 
+-(Money *) moneyFor:(NSString *)currency atIndex: (NSInteger) index;
+-(NSString *) currencyAtIndex:(NSInteger) index;
+-(Money *) totalMoneyWithBroker:(Broker *)broker;
+
+
 @end

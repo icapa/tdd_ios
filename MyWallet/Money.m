@@ -18,27 +18,30 @@
 @implementation Money
 
 
-+(id) euroWithAmount: (NSInteger) amount{
++(id) euroWithAmount: (NSNumber *) amount{
     return [[Money alloc ]initWithAmount:amount currency:@"EUR"];
 }
 
 
-+(id) dollarWithAmount: (NSInteger) amount{
++(id) dollarWithAmount: (NSNumber *) amount{
     return [[Money alloc] initWithAmount: amount currency:@"USD"];
 }
 
 
--(id) initWithAmount:(NSInteger) amount currency: (NSString * ) currency{
+-(id) initWithAmount:(NSNumber *) amount currency: (NSString * ) currency{
     if (self = [super init]){
-        _amount = @(amount);
+        _amount = amount;
         _currency = currency;
     }
     return self;
 }
 
 -(id<Money>)times: (NSInteger) multiplier{
+    
+    NSNumber *ns = [NSNumber numberWithDouble: [self.amount doubleValue] * multiplier];
+    
     Money *newMoney = [[Money alloc]
-                       initWithAmount:[self.amount  integerValue] * multiplier
+                       initWithAmount:ns
                        currency: self.currency];
     return newMoney;
 
@@ -46,8 +49,9 @@
 }
 
 -(id<Money>) plus: (Money *) other{
-    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
-    Money *total = [[Money alloc] initWithAmount:totalAmount
+    NSNumber *t = [NSNumber numberWithDouble:[self.amount doubleValue] + [other.amount doubleValue]];
+    
+    Money *total = [[Money alloc] initWithAmount: t
                                         currency:self.currency];
     return total;
 }
@@ -68,8 +72,8 @@
                     format:@"Must have a conversion from %@ to %@",self.currency,currency];
     }
     else{
+        NSNumber *newAmount = [NSNumber numberWithDouble:[self.amount doubleValue]*rate];
         
-        double newAmount = [self.amount doubleValue] * rate;
         
         result = [[Money alloc] initWithAmount:newAmount
                                       currency:currency];

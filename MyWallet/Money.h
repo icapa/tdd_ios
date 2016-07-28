@@ -13,7 +13,7 @@
 @protocol Money <NSObject>
 
 
--(id) initWithAmount:(NSInteger) amount
+-(id) initWithAmount:(NSNumber *) amount
             currency:(NSString *) currency;
 
 -(id<Money>)times: (NSInteger) multiplier;
@@ -35,8 +35,8 @@
 
 
 
-+(id) euroWithAmount: (NSInteger) amount;
-+(id) dollarWithAmount: (NSInteger) amount;
++(id) euroWithAmount: (NSNumber *) amount;
++(id) dollarWithAmount: (NSNumber *) amount;
 
 
 @end

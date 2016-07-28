@@ -33,11 +33,11 @@
     Broker *broker = [Broker new];
     [broker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
     
-    Wallet *wallet = [[Wallet alloc] initWithAmount:40 currency:@"EUR"];
-    [wallet plus: [Money dollarWithAmount:20]];
+    Wallet *wallet = [[Wallet alloc] initWithAmount:[NSNumber numberWithDouble:40] currency:@"EUR"];
+    [wallet plus: [Money dollarWithAmount:[NSNumber numberWithDouble:20]]];
     
     Money *reduced = [broker reduce:wallet toCurrency:@"USD"];
-    XCTAssertEqualObjects(reduced, [Money dollarWithAmount:100],@"€40 + $20 = $100 2:1");
+    XCTAssertEqualObjects(reduced, [Money dollarWithAmount:[NSNumber numberWithDouble:100]],@"€40 + $20 = $100 2:1");
     
 }
 

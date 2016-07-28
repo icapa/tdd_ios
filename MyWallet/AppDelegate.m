@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "WalletTableViewController.h"
+#import "Wallet.h"
+#import "Broker.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,42 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
+    
+    Wallet *wallet = nil;
+    Broker *broker = nil;
+    WalletTableViewController *tableVC=nil;
+    
+    // Creo un wallet con dos divisas distintas
+    wallet = [[Wallet alloc]initWithAmount:[NSNumber numberWithDouble:1] currency:@"EUR"];
+    [wallet plus:[Money euroWithAmount:[NSNumber numberWithDouble:2]]];
+    
+    [wallet plus:[Money dollarWithAmount:[NSNumber numberWithDouble:1]]];
+    
+    // Creo el broker
+    broker = [Broker new];
+    [broker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
+    
+    
+    // Creo la tabla que quiero probar
+    tableVC = [[WalletTableViewController alloc]
+                    initWithModel:wallet
+                    broker:broker];
+    
+
+    
+    self.window.rootViewController = tableVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self.window makeKeyAndVisible];
+    
+    
+    
+    
+    
+    
+    
     return YES;
 }
 

@@ -13,4 +13,6 @@
 @interface WalletTableViewController : UITableViewController
 
 -(id) initWithModel:(Wallet *) model broker:(Broker *)broker;
+
+-(NSString *) currencyAtIndex:(NSInteger)index;
 @end

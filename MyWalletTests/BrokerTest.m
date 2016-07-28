@@ -24,7 +24,7 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
     self.emptyBroker = [Broker new];
-    self.oneDollar = [Money dollarWithAmount:1];
+    self.oneDollar = [Money dollarWithAmount:[NSNumber numberWithDouble:1]];
     
 }
 
@@ -37,7 +37,7 @@
 
 -(void) testSimpleReduction{
     
-    Money *sum = [[Money dollarWithAmount:5] plus: [Money dollarWithAmount:5]];
+    Money *sum = [[Money dollarWithAmount:[NSNumber numberWithDouble:5]] plus: [Money dollarWithAmount:[NSNumber numberWithDouble:5]]];
     Money *reduced = [self.emptyBroker reduce: sum toCurrency: @"USD"];
     
     XCTAssertEqualObjects(sum,reduced,@"Conversion to same currency should be a NOP");
@@ -50,8 +50,8 @@
     
     [self.emptyBroker addRate: 2 fromCurrency:@"EUR" toCurrency:@"USD"];
     
-    Money *dollars = [Money dollarWithAmount:10];
-    Money *euros = [Money euroWithAmount:5];
+    Money *dollars = [Money dollarWithAmount:[NSNumber numberWithDouble:10]];
+    Money *euros = [Money euroWithAmount:[NSNumber numberWithDouble:5]];
     
     Money *converted = [self.emptyBroker reduce:dollars
                            toCurrency:@"EUR"];

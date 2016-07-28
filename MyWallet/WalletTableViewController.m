@@ -115,6 +115,55 @@
 }
 */
 
+-(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section < [self.broker.currencies count])
+    {
+        NSArray *array = [self.broker.currencies allObjects];
+        NSString *aux;
+
+        aux = [NSString stringWithFormat:@"%@",array[section]];
+        return aux;
+    }
+    else{
+        // Si es el total
+        return @"Wallet €";
+    }
+        
+}
+
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:CellIdentifier];
+    }
+    
+    // Si es la ultima seccion va el total
+    Money *money = nil;
+    if (indexPath.section == [self.tableView numberOfSections]-1){
+        money = [self.model totalMoneyWithBroker:self.broker];
+    }
+    else{
+        NSString *cur = [self currencyAtIndex:indexPath.section];
+        
+        money = [self.model moneyFor:cur
+                                    atIndex:indexPath.row];
+    }
+    
+    if (indexPath.row == [self.tableView numberOfRowsInSection:indexPath.section]-1){
+        cell.textLabel.text = [NSString stringWithFormat:@"Total: %@",[[money amount] description]];
+    }
+    else{
+        cell.textLabel.text = [[money amount] description];
+    }
+    
+    cell.detailTextLabel.text=@"";
+    
+    return cell;
+}
+
+
 #pragma mark - Utils
 -(NSInteger) moneyCountForCurrency: (NSInteger)section{
     NSInteger count=0;
@@ -127,5 +176,17 @@
     }
     return count;
 }
+
+
+-(NSString *) currencyAtIndex:(NSInteger)index{
+    NSArray * array =[self.broker.currencies allObjects];
+    if (array.count != 0 && index<array.count){
+        return [array[index] description];
+    }
+    else{
+        return nil;
+    }
+}
+
 
 @end

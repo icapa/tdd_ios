@@ -33,8 +33,8 @@
     self.label = [[UILabel alloc] initWithFrame:CGRectZero];
     self.simpleVC.displayLabel = self.label;
     
-    self.wallet = [[Wallet alloc] initWithAmount:1 currency:@"USD"];
-    [self.wallet plus: [Money euroWithAmount:1]];
+    self.wallet = [[Wallet alloc] initWithAmount:[NSNumber numberWithDouble:1] currency:@"USD"];
+    [self.wallet plus: [Money euroWithAmount:[NSNumber numberWithDouble:1]]];
     
     self.walletVC = [[WalletTableViewController alloc]
                      initWithModel:self.wallet
